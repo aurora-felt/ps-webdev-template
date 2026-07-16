@@ -1,0 +1,74 @@
+# Welcome to a Spago project!
+# You can edit this file as you like.
+#
+# Need help? See the following resources:
+# - Spago documentation: https://github.com/purescript/spago
+#
+# When creating a new Spago project, you can use
+# `spago init --no-comments` or `spago init -C`
+# to generate this file without the comments in this block.
+
+package:
+  name: my-project
+  dependencies:
+    - aff
+    - console
+    - effect
+    - halogen
+    - maybe
+    - prelude
+    - strings
+    - web-events
+    - web-html
+    - web-socket
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  packageSet:
+    registry: 77.11.1
+  
+# ### Additions
+# 
+# Purpose:
+# - Add packages that aren't already included in the default package set
+# 
+# Syntax:
+# where `<version>` is:
+# - a tag (i.e. "v4.0.0")
+# - a branch (i.e. "master")
+# - commit hash (i.e. "701f3e44aafb1a6459281714858fadf2c4c2a977")
+# -------------------------------
+# workspace:
+#   extraPackages:
+#     new-package-name:
+#       repo: "https://example.com/path/to/git/repo.git"
+#       version: <version>
+#       dependencies:
+#         - dependency1
+#         - dependency2
+# -------------------------------
+# 
+# Example:
+# -------------------------------
+# workspace:
+#   extraPackages:
+#     benchotron:
+#       repo: "https://github.com/hdgarrood/purescript-benchotron.git"
+#       version: "v7.0.0"
+#       dependencies:
+#         - "arrays"
+#         - "exists"
+#         - "profunctor"
+#         - "strings"
+#         - "quickcheck"
+#         - "lcg"
+#         - "transformers"
+#         - "foldable-traversable"
+#         - "exceptions"
+#         - "node-fs"
+#         - "node-buffer"
+#         - "node-readline"
+#         - "datetime"
+#         - "now"
+# -------------------------------
