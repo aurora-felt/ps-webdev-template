@@ -6,7 +6,7 @@ from watchfiles import awatch
 import subprocess
 
 # change these to whatever
-hostName = "192.168.1.165"
+hostName = "localhost"
 serverPort = 8080
 
 async def index_handler(_):
@@ -56,7 +56,8 @@ async def start_server(host=hostName, port=serverPort):
     await site.start()
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     loop.run_until_complete(start_server())
     loop.run_until_complete(watch_recompile())
     loop.run_forever()
